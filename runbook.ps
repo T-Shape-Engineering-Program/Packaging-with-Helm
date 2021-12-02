@@ -54,3 +54,4 @@ helm upgrade -n ns-dev demo-helm guestbook
 
 #Delete all resources -- Optional
 helm uninstall -n ns-dev demo-helm
+kubectl delete pvc -n ns-dev mongodb-pvc
