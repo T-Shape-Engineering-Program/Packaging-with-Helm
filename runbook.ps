@@ -32,19 +32,7 @@ kubectl delete svc -n ns-dev mongodb
 cd ..
 cd ..
 helm install -n ns-dev demo-helm guestbook #release + chart
-#Update the app version to 1.1 in the charet.yaml
-#Update the image version to 1.1 in frontend.yaml
-helm upgrade -n ns-dev demo-helm guestbook
 
-#Check Helm Revision
-helm status demo-helm -n ns-dev
-
-# !!!!! Bug in the System !!!
-# Rollback
-helm rollback -n ns-dev demo-helm 1
-
-# Lets check out the history
-helm history -n ns-dev demo-helm  
 
 # Major Version upgrade -- App version, image version and helm version changes
 # Version 6
